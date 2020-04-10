@@ -5,8 +5,10 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.msscbrewery.web.model.BeerDto;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 public class BeerServiceImpl implements BeerService {
 
 	@Override
@@ -27,6 +29,12 @@ public class BeerServiceImpl implements BeerService {
 	@Override
 	public void updateBeer(UUID beerId, BeerDto beerDto) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteById(UUID beerId) {
+		log.debug("Selected Beer has been deleted");
 		
 	}
 
